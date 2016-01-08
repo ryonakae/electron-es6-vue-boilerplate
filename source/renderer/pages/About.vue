@@ -4,14 +4,14 @@
 
   a(v-link='{path:"/"}') Home
 
-  p {{text}}
+  p(v-text='text')
 </template>
 
 <script>
   export default {
     data () {
       return {
-        title: 'Home',
+        title: 'About',
         text: 'Here is about!'
       }
     }

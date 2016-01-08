@@ -9,7 +9,10 @@ babel = require 'gulp-babel'
 
 gulp.task 'babel:browser', ->
   gulp
-    .src path.source.root + 'main.js'
+    .src(
+      [ path.source.root + 'main.js', path.source.browser + '**/*.js' ]
+      base: path.source.root
+    )
     .pipe gulpif env.isProduction == false, sourcemaps.init
       loadMaps: true
     .pipe babel

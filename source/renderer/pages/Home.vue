@@ -4,6 +4,8 @@
 
   a(v-link='{path:"/about"}') About
 
+  p Here is home!
+
   ul
     li(v-for='item in data') {{item}}
 </template>

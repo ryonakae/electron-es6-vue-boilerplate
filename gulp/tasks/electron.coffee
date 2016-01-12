@@ -6,12 +6,7 @@ electron = require('electron-connect').server.create()
 
 # Start browser process
 gulp.task 'electron:start', ->
-  # avoid multiple window
-  isStarted = false
-
-  if isStarted == false
-    electron.start null, ->
-      isStarted = true
+  electron.start()
 
 
 # Restart browser process
